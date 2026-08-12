@@ -14,6 +14,66 @@ The requirements are available at:
 
 [Requirements](https://github.com/Labbiofisbiocomp/MDFF-NM-Molecular-Dynamics-Flexible-Fitting-Normal-Modes/blob/main/requirements.md)
 
+## ⚙️ Environment Setup
+This repository provides a configuration script (setup.sh) that automatically installs:
+* R and the bio3d package
+* Python 3 and packages: numpy, matplotlib, prody, biopython, scipy
+* Build dependencies and auxiliary libraries
+
+1. Running the setup
+In Codespaces or any Linux environment, run:
+
+```bash
+chmod +x setup.sh
+sh setup.sh
+```
+
+2. Manual installation of NAMD and VMD
+You must download NAMD and VMD manually from the official UIUC.
+* VMD 1.9.4 (Linux 64-bit OpenGL/CUDA)
+* NAMD 2.14 Linux-x86_64-multicore
+
+After downloading, extract the archives:
+
+```bash
+tar -xvf NAMD_2.14_Linux-x86_64-multicore.tar.gz
+
+tar -xvf vmd-1.9.4a57.bin.LINUXAMD64-CUDA102-OptiX650-OSPRay185.opengl.tar.gz
+```
+
+---
+## ▶️ How to Run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/lbcb-ufabc/MDFF-NM-Molecular-Dynamics-Flexible-Fitting-Normal-Modes.git
+
+cd MDFF-NM-Molecular-Dynamics-Flexible-Fitting-Normal-Modes
+```
+
+Edit the simulation parameters in:
+
+```R
+inputs_mdff_nm.R
+```
+
+Run the pipeline:
+
+```bash
+sh run-serial-mdff-nm-final.sh
+```
+
+Generate the `.dcd` files and RMSD results:
+
+```bash
+sh rmsd_multireplica_MDFF_NM.sh
+```
+Project the structures:
+
+```bash
+projection.ipynb
+```
 ---
 
 # 📖 About the Project
@@ -56,41 +116,6 @@ Generation of independent trajectories
 Trajectory concatenation and RMSD analysis
         ↓
 Structure projection
-```
-
----
-
-## ▶️ How to Run
-
-Clone the repository:
-
-```bash
-git clone https://github.com/lbcb-ufabc/MDFF-NM-Molecular-Dynamics-Flexible-Fitting-Normal-Modes.git
-
-cd MDFF-NM-Molecular-Dynamics-Flexible-Fitting-Normal-Modes
-```
-
-Edit the simulation parameters in:
-
-```R
-inputs_mdff_nm.R
-```
-
-Run the pipeline:
-
-```bash
-sh run-serial-mdff-nm-final.sh
-```
-
-Generate the `.dcd` files and RMSD results:
-
-```bash
-sh rmsd_multireplica_MDFF_NM.sh
-```
-Project the structures:
-
-```bash
-projection.ipynb
 ```
 
 ---
