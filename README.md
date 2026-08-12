@@ -26,7 +26,6 @@ O pipeline MDFF-NM foi desenvolvido para:
 # 📂 Estrutura do repositório
 
 ```
-.
 ├── files/                        # Arquivo editável pelo usuário
 ├── inputs/                       # Arquivos de entrada  
 ├── tutoriais/
@@ -94,7 +93,7 @@ O repositório possui dois tutoriais principais.
 
 Apresenta o funcionamento completo do protocolo
 
-## 2. Tutorial de Análise de Trajetórias
+## 2. MDFF_NM_projectiona_Tutorial_part2.pdf  - Tutorial de Análise de Trajetórias
 
 Após a execução do MDFF-NM, este tutorial mostra como:
 
