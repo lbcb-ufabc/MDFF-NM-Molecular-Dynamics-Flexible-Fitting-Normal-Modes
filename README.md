@@ -30,7 +30,7 @@ Você deve baixar o NAMD e o VMD manualmente nos sites oficiais da UIUC.
 * VMD 1.9.4 (Linux 64-bit OpenGL/CUDA)
 * NAMD 2.14 Linux-x86_64-multicore
 
-Após o download, extraia os arquivos no seu diretório $HOME e configure o PATH:
+Após o download, extraia os arquivos:
 
 ```bash
 tar -xvf NAMD_2.14_Linux-x86_64-multicore.tar.gz
