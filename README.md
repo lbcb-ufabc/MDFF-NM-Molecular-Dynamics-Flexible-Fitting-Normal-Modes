@@ -30,9 +30,11 @@ O pipeline MDFF-NM foi desenvolvido para:
 ├── files/                        # Arquivo editável pelo usuário
 ├── inputs/                       # Arquivos de entrada  
 ├── tutoriais/
+├── results/                      # Contém os resultados do script rmsd_multreplica
 ├── requirements.md
 ├── run-serial-mdff-nm-final.sh   # Script principal
 ├── rmsd_multireplica_MDFF_NM.sh  # Script para gerar o rmsd
+├── projection.ipynb              # Notebook Python que permite projetar as estruturas (inicial, final e geradas)
 ├── README-en.md
 └── README.md
 ```
@@ -72,11 +74,15 @@ Execute o pipeline:
 sh run-serial-mdff-nm-final.sh
 ```
 
-Gere os arquivos .dcd e RMSD:
+Gere os arquivos .dcd e rmsd_*.txt:
 
 ```bash
 sh rmsd_multireplica_MDFF_NM.sh
 ```
+Projete as estruturas:
+
+```bash
+projection.ipynb
 
 ---
 
