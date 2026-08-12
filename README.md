@@ -11,6 +11,65 @@ O **MDFF-NM (Molecular Dynamics Flexible Fitting – Normal Modes)** é um pipel
 Os requisitos estão disponíveis em:
 [Requirements](https://github.com/Labbiofisbiocomp/MDFF-NM-Molecular-Dynamics-Flexible-Fitting-Normal-Modes/blob/main/requirements.md)
 
+## ⚙️ Instalação do ambiente
+Este repositório fornece um script de configuração (setup.sh) que instala automaticamente:
+* R e o pacote bio3d
+* Python 3 e pacotes: numpy, matplotlib, prody, biopython, scipy
+* Dependências de compilação e bibliotecas auxiliares
+
+1. Executando o setup
+No Codespaces ou em qualquer ambiente Linux, rode:
+
+```bash
+chmod +x setup.sh
+sh setup.sh
+```
+
+2. Instalação manual de NAMD e VMD
+Você deve baixar o NAMD e o VMD manualmente nos sites oficiais da UIUC.
+* VMD 1.9.4 (Linux 64-bit OpenGL/CUDA)
+* NAMD 2.14 Linux-x86_64-multicore
+
+Após o download, extraia os arquivos no seu diretório $HOME e configure o PATH:
+
+```bash
+tar -xvf NAMD_2.14_Linux-x86_64-multicore.tar.gz
+
+tar -xvf vmd-1.9.4a57.bin.LINUXAMD64-CUDA102-OptiX650-OSPRay185.opengl.tar.gz
+```
+
+---
+## ▶️ Como executar
+Clone o repositório:
+
+```bash
+git clone https://github.com/lbcb-ufabc/MDFF-NM-Molecular-Dynamics-Flexible-Fitting-Normal-Modes.git
+
+cd MDFF-NM-Molecular-Dynamics-Flexible-Fitting-Normal-Modes
+```
+
+Edite os parâmetros da simulação em:
+
+```R
+inputs_mdff_nm.R
+```
+
+Execute o pipeline:
+
+```bash
+sh run-serial-mdff-nm-final.sh
+```
+
+Gere os arquivos .dcd e rmsd_*.txt:
+
+```bash
+sh rmsd_multireplica_MDFF_NM.sh
+```
+Projete as estruturas:
+
+```bash
+projection.ipynb
+```
 ---
 
 # 📖 Sobre o projeto
@@ -51,38 +110,6 @@ Concatenação e análise (RMSD)
         ↓
 Projeção das estruturas
 
----
-## ▶️ Como executar
-Clone o repositório:
-
-```bash
-git clone https://github.com/lbcb-ufabc/MDFF-NM-Molecular-Dynamics-Flexible-Fitting-Normal-Modes.git
-
-cd MDFF-NM-Molecular-Dynamics-Flexible-Fitting-Normal-Modes
-```
-
-Edite os parâmetros da simulação em:
-
-```R
-inputs_mdff_nm.R
-```
-
-Execute o pipeline:
-
-```bash
-sh run-serial-mdff-nm-final.sh
-```
-
-Gere os arquivos .dcd e rmsd_*.txt:
-
-```bash
-sh rmsd_multireplica_MDFF_NM.sh
-```
-Projete as estruturas:
-
-```bash
-projection.ipynb
-```
 ---
 
 # 📚 Tutoriais
