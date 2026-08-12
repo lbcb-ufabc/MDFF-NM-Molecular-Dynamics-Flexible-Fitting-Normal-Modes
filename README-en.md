@@ -30,13 +30,14 @@ The MDFF-NM pipeline was developed to:
 # 📂 Repository Structure
 
 ```text
-.
 ├── files/                        # User-editable files
 ├── inputs/                       # Input files
 ├── tutorials/
+├── results/                      # Contains the results obtained after running the rmsd_multreplica
 ├── requirements.md
 ├── run-serial-mdff-nm-final.sh   # Main script
 ├── rmsd_multireplica_MDFF_NM.sh  # RMSD generation script
+├── projection.ipynb              # Python notebook that allows projecting the structures (initial, final, and generated) 
 ├── README-en.md
 └── README.md
 ```
@@ -86,6 +87,11 @@ Generate the `.dcd` files and RMSD results:
 ```bash
 sh rmsd_multireplica_MDFF_NM.sh
 ```
+Project the structures:
+
+```bash
+projection.ipynb
+```
 
 ---
 
@@ -97,7 +103,7 @@ The repository includes two main tutorials.
 
 Presents the complete workflow of the protocol.
 
-## 2. Trajectory Analysis Tutorial
+## 2. MDFF_NM_projectiona_Tutorial_part2.pdf  - Trajectory Analysis Tutorial
 
 After running MDFF-NM, this tutorial demonstrates how to:
 
