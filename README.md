@@ -83,7 +83,7 @@ Projete as estruturas:
 
 ```bash
 projection.ipynb
-
+```
 ---
 
 # 📚 Tutoriais
