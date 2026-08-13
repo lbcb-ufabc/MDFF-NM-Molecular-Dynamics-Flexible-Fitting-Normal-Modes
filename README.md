@@ -98,17 +98,12 @@ O pipeline MDFF-NM foi desenvolvido para:
 ```
 
 ## 🔄 Visão geral do pipeline
-Equilibração inicial
-        ↓
-Configuração de parâmetros no inputs_mdff_nm.R
-        ↓
-Execução de simulações MDFF_NM
-        ↓
-Geração de trajetórias independentes
-        ↓
-Concatenação e análise (RMSD)
-        ↓
-Projeção das estruturas
+* Equilibração inicial
+* Configuração de parâmetros no inputs_mdff_nm.R
+* Execução de simulações MDFF_NM
+* Geração de trajetórias independentes
+* Concatenação e análise (RMSD)
+* Projeção das estruturas
 
 ---
 
